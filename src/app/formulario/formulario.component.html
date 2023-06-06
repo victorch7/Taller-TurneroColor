@@ -1,0 +1,18 @@
+<input type="text" placeholder="Ingrese su nombre" class="form-control" #nombre> <!--Se puede acceder al input-->
+
+<button class="btn btn-primary mt-2" (click)="mostrarEnConsola(nombre.value)">
+    Mostrar en consola
+</button>
+
+<div class="alert alert-primary mt-4" *ngIf="abrirAlerta; else mensaje"> <!--directiva si Activas y podemos poner las variables ymanejo de funcionamiento, se ponga un mensaje del ng template-->
+    <p>Se ha enviado una alerta</p>
+    <button class="btn btn-danger" (click)="abrirAlerta=false"> <!--Al momento de dar click cierra el div-->
+        X
+    </button> 
+</div>
+
+<ng-template #mensaje >
+<div class="alert alert-danger mt-4">
+    Mensaje de prueba
+</div>
+</ng-template>
