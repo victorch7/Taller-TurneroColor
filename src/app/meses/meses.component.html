@@ -17,55 +17,34 @@
 
     </div>
 
-    <div class="col">
-        <span class="row">1.Domingo</span>
-        <span class="row">2.Lunes</span>
-        <span class="row">3.Martes</span>
-        <span class="row">4.Miercoles</span>
-        <span class="row">5.Jueves</span>
-        <span class="row">6.Viernes</span>
-        <span class="row">7.Sabado</span>
-
-    </div>
 </div>
 <input type="number" class="form-control mt-2" #nuevoMes placeholder="Ingrese mes">
 
-<input type="number" class="form-control mt-2" #nuevoDia placeholder="Ingrese dia">
 
 
-<button class="btn btn-primary mt-2 mb-4" (click)="mes = nuevoMes.value; dia=nuevoDia.value" >
+<button class="btn btn-primary mt-2 mb-4" (click)="mes = nuevoMes.value" >
     Aceptar
 </button>
 
 <div [ngSwitch]="mes" *ngIf="mes" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
 
-    <span *ngSwitchCase="1">Enero</span>
-    <span *ngSwitchCase="2">Febrero</span>
-    <span *ngSwitchCase="3">Marzo</span>
-    <span *ngSwitchCase="4">Abril</span>
-    <span *ngSwitchCase="5">Mayo</span>
-    <span *ngSwitchCase="6">Junio</span>
-    <span *ngSwitchCase="7">Julio</span>
-    <span *ngSwitchCase="8">Agosto</span>
-    <span *ngSwitchCase="9">Septiembre</span>
-    <span *ngSwitchCase="10">Octubre</span>
-    <span *ngSwitchCase="11">Noviembre</span>
-    <span *ngSwitchCase="12">Diciembre</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="1">Enero <app-dia></app-dia> </span>
+    <span class="fs-3 text-center row" *ngSwitchCase="2">Febrero <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="3">Marzo <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="4">Abril <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="5">Mayo <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="6">Junio <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="7">Julio <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="8">Agosto <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="9">Septiembre <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="10">Octubre <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="11">Noviembre <app-dia></app-dia></span>
+    <span class="fs-3 text-center row" *ngSwitchCase="12">Diciembre <app-dia></app-dia></span>
 
-    <span *ngSwitchDefault>Valor no valido</span>
-
+    <span *ngSwitchDefault> 
+        <div class="alert alert-danger mt-4">
+            Valor no valido
+            </div>
+     </span>
 </div>
 
-<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
-
-    <span *ngSwitchCase="1">Domingo</span>
-    <span *ngSwitchCase="2">Lunes</span>
-    <span *ngSwitchCase="3">Martes</span>
-    <span *ngSwitchCase="4">Miercoles</span>
-    <span *ngSwitchCase="5">Jueves</span>
-    <span *ngSwitchCase="6">Viernes</span>
-    <span *ngSwitchCase="7">Sabado</span>
-    
-    <span *ngSwitchDefault>Valor no valido</span>
-
-</div>

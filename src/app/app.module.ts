@@ -10,6 +10,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { MesesComponent } from './meses/meses.component';
+import { DiaComponent } from './dia/dia.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MesesComponent } from './meses/meses.component';
     FormularioComponent,
     BuclesComponent,
     SwitchComponent,
-    MesesComponent
+    MesesComponent,
+    DiaComponent
   ],
   imports: [
     BrowserModule,

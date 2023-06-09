@@ -1,0 +1,40 @@
+
+
+<div class="row mx-2 text-center fs-5">
+    <div class="col">
+
+    <span class="row">1.Domingo</span>
+    <span class="row">2.Lunes</span>
+    <span class="row">3.Martes</span>
+    <span class="row">4.Miercoles</span>
+    <span class="row">5.Jueves</span>
+    <span class="row">6.Viernes</span>
+    <span class="row">7.Sabado</span>
+    </div>
+
+</div>
+
+<input type="number" class="form-control mt-2" #nuevoDia placeholder="Ingrese dia">
+
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+
+    <span class="fs-3 text-center row" *ngSwitchCase="1">Domingo</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="2">Lunes</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="3">Martes</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="4">Miercoles</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="5">Jueves</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="6">Viernes</span>
+    <span class="fs-3 text-center row" *ngSwitchCase="7">Sabado</span>
+    
+    <span *ngSwitchDefault> 
+        <div class="alert alert-danger mt-4">
+            Valor no valido
+            </div>
+     </span>
+
+</div>
+
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Aceptar
+</button>
