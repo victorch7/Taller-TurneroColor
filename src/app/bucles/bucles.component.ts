@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Persona } from '../persona';
+import { Opciones } from '../opciones';
 
 @Component({
   selector: 'app-bucles',
@@ -8,10 +8,11 @@ import { Persona } from '../persona';
 })
 export class BuclesComponent {
 
-  personas: Persona[]=[
-    { nombre: "Juan", edad: 18},
-    { nombre: "Danilo", edad: 20 },
-    { nombre: "Ana", edad: 25}
+  opciones: Opciones[]=[
+    { nombre: "Turnero"},
+    { nombre: "Formulario"},
+    { nombre: "Meses del año"},
+    { nombre: "Botones"}
   ]
 
 }

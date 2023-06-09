@@ -9,6 +9,7 @@ import { BotonesComponent } from './botones/botones.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
+import { MesesComponent } from './meses/meses.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SwitchComponent } from './switch/switch.component';
     BotonesComponent,
     FormularioComponent,
     BuclesComponent,
-    SwitchComponent
+    SwitchComponent,
+    MesesComponent
   ],
   imports: [
     BrowserModule,

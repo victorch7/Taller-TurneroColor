@@ -1,0 +1,25 @@
+<h1 class="text-center">Meses del año</h1>
+
+<input type="number" class="form-control mt-2" #nuevoDia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Aceptar
+</button>
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+
+    <span *ngSwitchCase="1">Enero</span>
+    <span *ngSwitchCase="2">Febrero</span>
+    <span *ngSwitchCase="3">Marzo</span>
+    <span *ngSwitchCase="4">Abril</span>
+    <span *ngSwitchCase="5">Mayo</span>
+    <span *ngSwitchCase="6">Junio</span>
+    <span *ngSwitchCase="7">Julio</span>
+    <span *ngSwitchCase="8">Agosto</span>
+    <span *ngSwitchCase="9">Septiembre</span>
+    <span *ngSwitchCase="10">Octubre</span>
+    <span *ngSwitchCase="11">Noviembre</span>
+    <span *ngSwitchCase="12">Diciembre</span>
+
+    <span *ngSwitchDefault>Valor no valido</span>
+
+</div>
