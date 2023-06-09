@@ -1,11 +1,43 @@
-<h1 class="text-center">Meses del año</h1>
+<h1 class="text-center">Meses del año y dias de la semana</h1>
+ <div class="row mx-2 text-center">
+    <div class="col">
+   
+    <span class="row">1.Enero</span>
+    <span class="row">2.Febrero</span>
+    <span class="row">3.Marzo</span>
+    <span class="row">4.Abril</span>
+    <span class="row">5.Mayo</span>
+    <span class="row">6.Junio</span>
+    <span class="row">7.Julio</span>
+    <span class="row">8.Agosto</span>
+    <span class="row">9.Septiembre</span>
+    <span class="row">10.Octubre</span>
+    <span class="row">11.Noviembre</span>
+    <span class="row">12.Diciembre</span>
 
-<input type="number" class="form-control mt-2" #nuevoDia>
-<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    </div>
+
+    <div class="col">
+        <span class="row">1.Domingo</span>
+        <span class="row">2.Lunes</span>
+        <span class="row">3.Martes</span>
+        <span class="row">4.Miercoles</span>
+        <span class="row">5.Jueves</span>
+        <span class="row">6.Viernes</span>
+        <span class="row">7.Sabado</span>
+
+    </div>
+</div>
+<input type="number" class="form-control mt-2" #nuevoMes placeholder="Ingrese mes">
+
+<input type="number" class="form-control mt-2" #nuevoDia placeholder="Ingrese dia">
+
+
+<button class="btn btn-primary mt-2 mb-4" (click)="mes = nuevoMes.value; dia=nuevoDia.value" >
     Aceptar
 </button>
 
-<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+<div [ngSwitch]="mes" *ngIf="mes" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
 
     <span *ngSwitchCase="1">Enero</span>
     <span *ngSwitchCase="2">Febrero</span>
@@ -20,6 +52,20 @@
     <span *ngSwitchCase="11">Noviembre</span>
     <span *ngSwitchCase="12">Diciembre</span>
 
+    <span *ngSwitchDefault>Valor no valido</span>
+
+</div>
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+
+    <span *ngSwitchCase="1">Domingo</span>
+    <span *ngSwitchCase="2">Lunes</span>
+    <span *ngSwitchCase="3">Martes</span>
+    <span *ngSwitchCase="4">Miercoles</span>
+    <span *ngSwitchCase="5">Jueves</span>
+    <span *ngSwitchCase="6">Viernes</span>
+    <span *ngSwitchCase="7">Sabado</span>
+    
     <span *ngSwitchDefault>Valor no valido</span>
 
 </div>

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: #CCCCCC;
+    background: #a6a0d1;
     font-family: 'Oswald', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -17,3 +17,6 @@ body{
     margin: 10px;
 }
 
+.container{
+    width: 700px;
+}

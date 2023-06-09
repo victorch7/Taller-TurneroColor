@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./meses.component.css']
 })
 export class MesesComponent {
-  dia?:string; //se camabia a string antes era number
-
+  mes?:string; //se camabia a string antes era number
+  dia?:String;
 
 }

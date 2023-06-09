@@ -1,10 +1,15 @@
-<input type="text" placeholder="Ingrese su nombres" class="form-control" #nombre> <!--Se puede acceder al input-->
-<input type="text" placeholder="Ingrese su apellidos" class="form-control" #apellido> <!--Se puede acceder al input-->
-<input type="number" placeholder="Ingrese su edad" class="form-control" #edad> <!--Se puede acceder al input-->
-<input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control" #fecha> <!--Se puede acceder al input-->
-<input type="number" placeholder="Ingrese su telefono" class="form-control" #telefono> <!--Se puede acceder al input-->
-<input type="email" placeholder="Ingrese su email" class="form-control" #email> <!--Se puede acceder al input-->
 
+
+<label class="fs-1 text-center">Formulario</label>
+
+<div class="container">
+<input type="text" placeholder="Ingrese su nombres" class="form-control my-1" #nombre> <!--Se puede acceder al input-->
+<input type="text" placeholder="Ingrese su apellidos" class="form-control my-1" #apellido> <!--Se puede acceder al input-->
+<input type="number" placeholder="Ingrese su edad" class="form-control my-1" #edad> <!--Se puede acceder al input-->
+<input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control my-1" #fecha> <!--Se puede acceder al input-->
+<input type="number" placeholder="Ingrese su telefono" class="form-control my-1" #telefono> <!--Se puede acceder al input-->
+<input type="email" placeholder="Ingrese su email" class="form-control my-1" #email> <!--Se puede acceder al input-->
+</div>
 
 
 <button class="btn btn-primary mt-2" (click)="mostrarEnConsola(nombre.value, apellido.value, edad.value, fecha.value, telefono.value, email.value)">

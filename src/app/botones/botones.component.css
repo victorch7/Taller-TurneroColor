@@ -3,7 +3,7 @@ h1{
     text-align: center;
 }
 .contenedor{
-    background: rgb(108, 155, 37);
+    background: rgb(85, 86, 84);
     width: 100%;
     padding: 30px 30px;
     text-align: center;
@@ -11,10 +11,10 @@ h1{
     border-radius: 10px;
 }
 .contenedor h1{
-    color: rgb(24, 61, 36);
+    color: rgb(255, 255, 255);
 }
 .contenedor h2{
-    color: rgb(10, 95, 38);
+    color: rgb(255, 255, 255);
 }
 
 h2{
