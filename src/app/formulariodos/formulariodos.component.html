@@ -1,0 +1,29 @@
+
+<div class="card body my-5 mx-5 p-3 ">
+<form (ngSubmit)="procesar()">
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example1">Nombre</label>
+    <input type="text" name="nombre" placeholder="Ingrese su nombre" class="form-control" [(ngModel)]="Persona.nombre" required #name="ngModel">
+    <div class="alert alert-danger mt-2" [hidden]="name.valid || name.valid">
+      El nombre es olbigatorio
+    </div>
+  </div>
+  
+    <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example2">Edad</label>
+    <input type="number" name="edad" id="form5Example2" placeholder="Ingrese su edad" class="form-control" [(ngModel)]="Persona.edad" required #edad="ngModel">
+    <div class="alert alert-danger mt-2" [hidden]="edad.valid || edad.valid">
+      La edad es olbigatorio
+    </div>
+  </div>
+    <!-- Submit button -->
+    <button [disabled]="name.invalid || edad.invalid" class="btn btn-success btn-block mb-4 ">Enviar</button>
+  </form>
+
+  <!--{{Persona | json }} llama a persona pero no funciona por le array-->
+
+  {{name.errors | json }} <!--Manejo de   errores-->
+  {{name.valid | json }}
+  
+</div>

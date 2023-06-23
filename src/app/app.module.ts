@@ -11,6 +11,8 @@ import { BuclesComponent } from './bucles/bucles.component';
 import { SwitchComponent } from './switch/switch.component';
 import { MesesComponent } from './meses/meses.component';
 import { DiaComponent } from './dia/dia.component';
+import { FormulariodosComponent } from './formulariodos/formulariodos.component';
+import { FormsModule } from '@angular/forms';//Se importa
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { DiaComponent } from './dia/dia.component';
     BuclesComponent,
     SwitchComponent,
     MesesComponent,
-    DiaComponent
+    DiaComponent,
+    FormulariodosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
